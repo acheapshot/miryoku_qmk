@@ -1,0 +1,15 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'acheapshot chocofi'
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    with:
+      keyboard: '["crkbd"]'
+      alphas: '["querty"]'
+      nav: '["default"]'
+      clipboard: '["win"]'
+      layers: '["default"]'
