@@ -5,3 +5,8 @@
 
 #pragma once
 
+#define MIRYOKU_LAYER_BUTTON \
+U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,                           U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,      \
+KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           TG(U_TD_U_BUTTON),        U_NU,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,    \
+U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,                           U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,      \
+U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,                         KC_BTN2,           KC_BTN1,           KC_BTN3,           U_NP,              U_NP
