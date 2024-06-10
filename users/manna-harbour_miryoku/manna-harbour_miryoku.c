@@ -59,6 +59,35 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 };
 
 
+//acheapshot combos
+enum combo_events {
+	UH_GOODDAY,
+	IH_BRMC
+};
+
+const uint16_t PROGMEM good_day_combo[] = {KC_U, KC_H, COMBO_END};
+const uint16_t PROGMEM brmc_combo[] = {KC_I, KC_H, COMBO_END};
+
+combo_t key_combos[] = {
+  [UH_GOODDAY] = COMBO_ACTION(good_day_combo),
+  [IH_BRMC] = COMBO_ACTION(brmc_combo),
+};
+
+void process_combo_event(uint16_t combo_index, bool pressed) {
+  switch(combo_index) {
+    case UH_GOODDAY:
+      if (pressed) {
+        SEND_STRING("Good Day,/n/n");
+      }
+      break;
+    case IH_BRMC:
+      if (pressed) {
+        SEND_STRING("Best regards,/nMatt Chesser");
+      }
+      break;
+  }
+}
+
 // thumb combos
 
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
